@@ -44,7 +44,22 @@ a:focus-visible, button:focus-visible{
   outline-offset:3px;
 }
 
-button{ font-family:inherit; background:none; border:none; cursor:pointer; }
+button{
+  appearance:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  margin:0;
+  font:inherit;
+  font-family:inherit;
+  color:inherit;
+  background:none;
+  border:none;
+  border-radius:0;
+  box-shadow:none;
+  text-align:inherit;
+  letter-spacing:inherit;
+  cursor:pointer;
+}
 
 /* ============================================================
    ATMOSPHERE — scanlines / vignette / noise
