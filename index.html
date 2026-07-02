@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOSSIER // Narrative &amp; Game Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanlines" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+
+<!-- ================= NAV / STATUS BAR ================= -->
+<header class="statusbar">
+  <div class="statusbar-left">
+    <span class="dot dot-red"></span>
+    <span class="statusbar-label" data-fr="SYS//PORTFOLIO.EXE" data-en="SYS//PORTFOLIO.EXE">SYS//PORTFOLIO.EXE</span>
+  </div>
+
+  <nav class="statusbar-nav" id="mainNav">
+    <a href="#dossier" data-page="0" class="nav-link is-active" data-fr="Dossier" data-en="Dossier">Dossier</a>
+    <a href="#narratif" data-page="1" class="nav-link" data-fr="Narrative Design" data-en="Narrative Design">Narrative Design</a>
+    <a href="#gamedesign" data-page="2" class="nav-link" data-fr="Game Design" data-en="Game Design">Game Design</a>
+    <a href="#bribes" data-page="3" class="nav-link" data-fr="Bribes d'écrit" data-en="Writing Samples">Bribes d'écrit</a>
+    <a href="#bonus" data-page="4" class="nav-link" data-fr="Compétence bonus" data-en="Bonus Skills">Compétence bonus</a>
+  </nav>
+
+  <div class="statusbar-right">
+    <button id="langSwitch" class="lang-switch" aria-label="Changer de langue">
+      <span class="lang-fr is-active">FR</span><span class="lang-sep">/</span><span class="lang-en">EN</span>
+    </button>
+    <span id="clock">00:00:00</span>
+  </div>
+</header>
+
+<!-- ================= PAGER (planches horizontales) ================= -->
+<main class="pager">
+  <div class="pager-track" id="pagerTrack">
+
+    <!-- ===== PAGE 0 — DOSSIER ===== -->
+    <section class="page" id="dossier" data-index="0">
+      <div class="page-scroll">
+
+        <div class="hero">
+          <div class="hero-frame">
+            <div class="hero-tag" data-fr="RAPPORT D'UNITÉ — ACCÈS AUTORISÉ" data-en="UNIT REPORT — ACCESS GRANTED">RAPPORT D'UNITÉ — ACCÈS AUTORISÉ</div>
+            <h1 class="hero-title">
+              <span id="typewriter" data-fr="NARRATIVE & GAME DESIGN" data-en="NARRATIVE & GAME DESIGN"></span><span class="cursor">_</span>
+            </h1>
+            <p class="hero-subtitle" data-fr="Narrative Design &amp; Game Design — j'écris des mondes qui se jouent, et des systèmes qui racontent." data-en="Narrative Design &amp; Game Design — I write worlds that can be played, and systems that tell stories.">
+              Narrative Design &amp; Game Design — j'écris des mondes qui se jouent, et des systèmes qui racontent.
+            </p>
+            <div class="hero-meta">
+              <div class="meta-row"><span class="meta-key" data-fr="DÉSIGNATION" data-en="NAME">DÉSIGNATION</span><span class="meta-val">Votre Nom</span></div>
+              <div class="meta-row"><span class="meta-key" data-fr="FONCTION" data-en="ROLE">FONCTION</span><span class="meta-val">Narrative Designer / Game Designer</span></div>
+              <div class="meta-row"><span class="meta-key" data-fr="STATUT" data-en="STATUS">STATUT</span><span class="meta-val ok" data-fr="DISPONIBLE POUR MISSION" data-en="AVAILABLE FOR HIRE">DISPONIBLE POUR MISSION</span></div>
+            </div>
+            <a href="#narratif" class="btn-terminal nav-link" data-page="1" data-fr="&gt; OUVRIR LES ARCHIVES" data-en="&gt; OPEN ARCHIVES">&gt; OUVRIR LES ARCHIVES</a>
+          </div>
+        </div>
+
+        <div class="operator">
+          <div class="operator-frame">
+            <div class="operator-screen">
+              <div class="operator-screen-glow"></div>
+              <span class="operator-screen-label" data-fr="PHOTO — UNITÉ 01" data-en="PHOTO — UNIT 01">PHOTO — UNITÉ 01</span>
+            </div>
+            <div class="operator-text">
+              <h2 class="section-title" data-fr="// FICHIER OPÉRATEUR" data-en="// OPERATOR FILE">// FICHIER OPÉRATEUR</h2>
+              <p>
+                Je conçois des récits interactifs où l'histoire n'est pas racontée mais traversée : dialogues ramifiés,
+                systèmes émergents, mise en scène par l'environnement. Mon travail se situe à la frontière entre
+                l'écriture et le game design — je pense en boucles de gameplay autant qu'en arcs narratifs.
+              </p>
+              <p>
+                Remplacez ce texte par votre propre biographie : votre parcours, les outils que vous maîtrisez
+                (Twine, Ink, articy:draft, Unity, Unreal...), et ce qui vous distingue en tant que conteur·euse de jeux.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="transmission">
+          <h2 class="section-title section-title-center" data-fr="// OUVRIR UNE TRANSMISSION" data-en="// OPEN A TRANSMISSION">// OUVRIR UNE TRANSMISSION</h2>
+          <p class="transmission-sub" data-fr="Une collaboration, une mission, une question — le canal est ouvert." data-en="A collaboration, a mission, a question — the channel is open.">Une collaboration, une mission, une question — le canal est ouvert.</p>
+          <div class="terminal-box">
+            <div class="terminal-line"><span class="prompt">&gt;</span> contact : <a href="mailto:votre@email.com">votre@email.com</a></div>
+            <div class="terminal-line"><span class="prompt">&gt;</span> LinkedIn : <a href="#" target="_blank" rel="noopener">votre profil</a></div>
+            <div class="terminal-line"><span class="prompt">&gt;</span> Itch.io : <a href="#" target="_blank" rel="noopener">lien vers vos jeux</a></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== PAGE 1 — NARRATIVE DESIGN ===== -->
+    <section class="page" id="narratif" data-index="1">
+      <div class="page-scroll">
+        <h2 class="section-title section-title-center" data-fr="// ARCHIVES — NARRATIVE DESIGN" data-en="// ARCHIVES — NARRATIVE DESIGN">// ARCHIVES — NARRATIVE DESIGN</h2>
+        <p class="page-intro" data-fr="Écriture de dialogues, worldbuilding, structures narratives ramifiées — les projets où le récit mène la conception." data-en="Dialogue writing, worldbuilding, branching narrative structures — projects where story drives design.">
+          Écriture de dialogues, worldbuilding, structures narratives ramifiées — les projets où le récit mène la conception.
+        </p>
+
+        <article class="case reveal">
+          <div class="case-index">DOSSIER Nº 01</div>
+          <div class="case-body">
+            <div class="case-header">
+              <h3>Titre du Projet</h3>
+              <span class="stamp" data-fr="CONFIDENTIEL" data-en="CONFIDENTIAL">CONFIDENTIEL</span>
+            </div>
+            <p class="case-role" data-fr="RÔLE — Narrative Designer" data-en="ROLE — Narrative Designer">RÔLE — Narrative Designer</p>
+            <p class="case-desc">
+              Décrivez ici le projet : le concept, votre contribution spécifique (écriture de dialogues,
+              conception de quêtes, worldbuilding, systèmes de choix/conséquences...), et le résultat obtenu.
+            </p>
+            <div class="case-tags"><span>Twine</span><span>Narration ramifiée</span><span>Worldbuilding</span></div>
+            <a href="#" class="case-link" data-fr="&gt; ACCÉDER AU DOSSIER COMPLET" data-en="&gt; OPEN FULL FILE">&gt; ACCÉDER AU DOSSIER COMPLET</a>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-index">DOSSIER Nº 02</div>
+          <div class="case-body">
+            <div class="case-header">
+              <h3>Titre du Projet</h3>
+              <span class="stamp stamp-green" data-fr="EN COURS" data-en="ONGOING">EN COURS</span>
+            </div>
+            <p class="case-role" data-fr="RÔLE — Écriture &amp; Dialogue" data-en="ROLE — Writing &amp; Dialogue">RÔLE — Écriture &amp; Dialogue</p>
+            <p class="case-desc">
+              Un second projet narratif : structure en arbre, gestion des variables d'état,
+              cohérence de ton et de voix sur l'ensemble du texte.
+            </p>
+            <div class="case-tags"><span>Ink</span><span>Character Writing</span><span>Lore</span></div>
+            <a href="#" class="case-link" data-fr="&gt; ACCÉDER AU DOSSIER COMPLET" data-en="&gt; OPEN FULL FILE">&gt; ACCÉDER AU DOSSIER COMPLET</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PAGE 2 — GAME DESIGN ===== -->
+    <section class="page" id="gamedesign" data-index="2">
+      <div class="page-scroll">
+        <h2 class="section-title section-title-center" data-fr="// ARCHIVES — GAME DESIGN" data-en="// ARCHIVES — GAME DESIGN">// ARCHIVES — GAME DESIGN</h2>
+        <p class="page-intro" data-fr="Mécaniques, systèmes, équilibrage et prototypage — les projets centrés sur le jeu plus que sur le récit." data-en="Mechanics, systems, balancing and prototyping — projects centered on gameplay over narrative.">
+          Mécaniques, systèmes, équilibrage et prototypage — les projets centrés sur le jeu plus que sur le récit.
+        </p>
+
+        <article class="case reveal">
+          <div class="case-index">DOSSIER Nº 01</div>
+          <div class="case-body">
+            <div class="case-header">
+              <h3>Titre du Projet</h3>
+              <span class="stamp" data-fr="ARCHIVÉ" data-en="ARCHIVED">ARCHIVÉ</span>
+            </div>
+            <p class="case-role" data-fr="RÔLE — Game Designer" data-en="ROLE — Game Designer">RÔLE — Game Designer</p>
+            <p class="case-desc">
+              Décrivez ici un projet de game design : mécaniques conçues, systèmes d'équilibrage,
+              itérations menées suite aux playtests.
+            </p>
+            <div class="case-tags"><span>Unity</span><span>Level Design</span><span>Systémique</span></div>
+            <a href="#" class="case-link" data-fr="&gt; ACCÉDER AU DOSSIER COMPLET" data-en="&gt; OPEN FULL FILE">&gt; ACCÉDER AU DOSSIER COMPLET</a>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-index">DOSSIER Nº 02</div>
+          <div class="case-body">
+            <div class="case-header">
+              <h3>Titre du Projet</h3>
+              <span class="stamp" data-fr="ARCHIVÉ" data-en="ARCHIVED">ARCHIVÉ</span>
+            </div>
+            <p class="case-role" data-fr="RÔLE — Game Design &amp; Prototypage" data-en="ROLE — Game Design &amp; Prototyping">RÔLE — Game Design &amp; Prototypage</p>
+            <p class="case-desc">
+              Un projet de jam ou personnel : contraintes de temps, contexte d'équipe,
+              ce que vous en avez retenu.
+            </p>
+            <div class="case-tags"><span>Game Jam</span><span>Prototype</span><span>Playtesting</span></div>
+            <a href="#" class="case-link" data-fr="&gt; ACCÉDER AU DOSSIER COMPLET" data-en="&gt; OPEN FULL FILE">&gt; ACCÉDER AU DOSSIER COMPLET</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PAGE 3 — BRIBES D'ÉCRIT / ÉCHANTILLONS ===== -->
+    <section class="page" id="bribes" data-index="3">
+      <div class="page-scroll">
+        <h2 class="section-title section-title-center" data-fr="// ARCHIVES — BRIBES D'ÉCRIT" data-en="// ARCHIVES — WRITING SAMPLES">// ARCHIVES — BRIBES D'ÉCRIT</h2>
+        <p class="page-intro" data-fr="Extraits, fragments, échantillons — des écrits trop courts pour être des projets, mais qui disent quelque chose." data-en="Excerpts, fragments, samples — writing too short to be a project, but worth showing.">
+          Extraits, fragments, échantillons — des écrits trop courts pour être des projets, mais qui disent quelque chose.
+        </p>
+
+        <article class="excerpt reveal">
+          <div class="excerpt-label" data-fr="EXTRAIT — LOG Nº 01" data-en="EXCERPT — LOG Nº 01">EXTRAIT — LOG Nº 01</div>
+          <blockquote class="excerpt-text">
+            Collez ici un court extrait de texte — dialogue, description, fragment de lore.
+            Deux ou trois phrases suffisent à montrer une voix.
+          </blockquote>
+          <div class="excerpt-source" data-fr="SOURCE — titre / contexte" data-en="SOURCE — title / context">SOURCE — titre / contexte</div>
+        </article>
+
+        <article class="excerpt reveal">
+          <div class="excerpt-label" data-fr="EXTRAIT — LOG Nº 02" data-en="EXCERPT — LOG Nº 02">EXTRAIT — LOG Nº 02</div>
+          <blockquote class="excerpt-text">
+            Un second fragment. Ça peut être un poème, une bio de personnage,
+            un item description, ou un jet d'écriture libre.
+          </blockquote>
+          <div class="excerpt-source" data-fr="SOURCE — titre / contexte" data-en="SOURCE — title / context">SOURCE — titre / contexte</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PAGE 4 — COMPÉTENCE BONUS ===== -->
+    <section class="page" id="bonus" data-index="4">
+      <div class="page-scroll">
+        <h2 class="section-title section-title-center" data-fr="// DIAGNOSTIC — COMPÉTENCES ANNEXES" data-en="// DIAGNOSTIC — ADDITIONAL SKILLS">// DIAGNOSTIC — COMPÉTENCES ANNEXES</h2>
+        <p class="page-intro" data-fr="Ce que je sais faire en dehors de mon domaine principal." data-en="Things I can do outside my main field.">
+          Ce que je sais faire en dehors de mon domaine principal.
+        </p>
+
+        <div class="diag-grid">
+          <div class="diag-item">
+            <div class="diag-label"><span data-fr="MODÉLISATION 3D" data-en="3D MODELING">MODÉLISATION 3D</span><span>—</span></div>
+            <div class="diag-bar"><div class="diag-fill" style="--val:60%"></div></div>
+          </div>
+          <div class="diag-item">
+            <div class="diag-label"><span data-fr="ILLUSTRATION / CONCEPT ART" data-en="ILLUSTRATION / CONCEPT ART">ILLUSTRATION / CONCEPT ART</span><span>—</span></div>
+            <div class="diag-bar"><div class="diag-fill" style="--val:50%"></div></div>
+          </div>
+          <div class="diag-item">
+            <div class="diag-label"><span data-fr="MONTAGE VIDÉO / SOUND DESIGN" data-en="VIDEO EDITING / SOUND DESIGN">MONTAGE VIDÉO / SOUND DESIGN</span><span>—</span></div>
+            <div class="diag-bar"><div class="diag-fill" style="--val:40%"></div></div>
+          </div>
+        </div>
+        <p class="page-note" data-fr="Ajustez les pourcentages et libellés selon vos vraies compétences bonus." data-en="Adjust percentages and labels to reflect your real bonus skills.">
+          Ajustez les pourcentages et libellés selon vos vraies compétences bonus.
+        </p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- ================= BARRE INFÉRIEURE — bobine / navigation ================= -->
+<footer class="reelbar">
+  <button class="reel-arrow" id="prevPage" aria-label="Page précédente">&lt;</button>
+  <div class="reel-dots" id="reelDots"></div>
+  <button class="reel-arrow" id="nextPage" aria-label="Page suivante">&gt;</button>
+  <span class="reel-count"><span id="pageCurrent">01</span>/<span id="pageTotal">05</span></span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
