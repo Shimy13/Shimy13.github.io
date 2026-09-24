@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOSSIER // Narrative &amp; Game Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= ÉCRAN DE CONNEXION — entrée dans l'archive ================= -->
+<div class="boot-screen" id="bootScreen">
+  <div class="boot-lines" id="bootLines"></div>
+  <div class="boot-skip" id="bootSkip">APPUYEZ SUR UNE TOUCHE — OU PATIENTEZ</div>
+</div>
+
+<div class="glitch-overlay" id="glitchOverlay" aria-hidden="true">
+  <div class="glitch-bar"></div>
+  <div class="glitch-bar"></div>
+  <div class="glitch-bar"></div>
+</div>
+
+<div class="crt-bezel" aria-hidden="true"></div>
+
+<div id="siteRoot" class="site-root">
+
+<div class="scanlines" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="burns" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+<div class="vhs-lines" aria-hidden="true"></div>
+<div class="vhs-tracking" aria-hidden="true"></div>
+
+<!-- ================= NAV / STATUS BAR ================= -->
+<header class="statusbar">
+  <div class="statusbar-left">
+    <span class="dot dot-red"></span>
+    <span class="statusbar-label" data-fr="SYS//PORTFOLIO.EXE" data-en="SYS//PORTFOLIO.EXE">SYS//PORTFOLIO.EXE</span>
+  </div>
+
+  <nav class="statusbar-nav" id="mainNav">
+    <a href="#dossier" data-page="0" class="nav-link is-active" data-fr="Dossier Opérateur" data-en="Dossier">Dossier Opérateur</a>
+    <a href="#narratif" data-page="1" class="nav-link" data-fr="Section Principal" data-en="Narrative Design">Section Principal</a>
+    <a href="#gamedesign" data-page="2" class="nav-link" data-fr="Section Secondaire" data-en="Game Design">Section Secondaire</a>
+    <a href="#bonus" data-page="3" class="nav-link" data-fr="Annexe" data-en="Bonus Skills">Annexe</a>
+  </nav>
+
+  <div class="statusbar-right">
+    <button id="langSwitch" class="lang-switch" aria-label="Changer de langue">
+      <span class="lang-fr is-active">FR</span><span class="lang-sep">/</span><span class="lang-en">EN</span>
+    </button>
+    <span id="clock">00:00:00</span>
+  </div>
+</header>
+
+<!-- ================= PAGER (planches horizontales) ================= -->
+<main class="pager">
+  <div class="pager-track" id="pagerTrack">
+
+    <!-- ===== PAGE 0 — DOSSIER ===== -->
+    <section class="page" id="dossier" data-index="0">
+      <div class="page-scroll">
+
+        <div class="hero">
+          <div class="hero-frame brackets">
+            <div class="hero-tag" data-fr="BASE DE DONNÉES — DOSSIER UNITÉ 512" data-en="DATABASE — UNIT 512 FILE">BASE DE DONNÉES — DOSSIER UNITÉ 512</div>
+            <h1 class="hero-title glitch-text">
+              <span id="typewriter" data-fr="NARRATIVE & GAME DESIGNER" data-en="NARRATIVE & GAME DESIGNER"></span><span class="cursor">_</span>
+            </h1>
+            <!-- ================================================
+                 MODIFIEZ ICI : vos informations personnelles
+                 ================================================ -->
+            <div class="hero-meta">
+              <!-- MODIFIEZ ICI : votre nom -->
+              <div class="meta-row"><span class="meta-key" data-fr="DÉSIGNATION" data-en="DESIGNATION">DÉSIGNATION</span><span class="meta-val">UNITÉ 512 — <span class="meta-editable">Charentin Louis</span></span></div>
+              <div class="meta-row"><span class="meta-key" data-fr="LOCALISATION" data-en="LOCATION">LOCALISATION</span><span class="meta-val" data-fr="INCONNUE" data-en="UNKNOWN">INCONNUE</span></div>
+              <div class="meta-row"><span class="meta-key" data-fr="SIGNAL" data-en="SIGNAL">SIGNAL</span><span class="meta-val"><span class="signal-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span> <span data-fr="INSTABLE" data-en="UNSTABLE">INSTABLE</span></span></div>
+              <div class="meta-row"><span class="meta-key" data-fr="FONCTION" data-en="ROLE">FONCTION</span><span class="meta-val">Narrative Designer / Game Designer</span></div>
+              <div class="meta-row"><span class="meta-key" data-fr="STATUT" data-en="STATUS">STATUT</span><span class="meta-val ok" data-fr="DISPONIBLE POUR MISSION" data-en="AVAILABLE FOR HIRE">DISPONIBLE POUR MISSION</span></div>
+            </div>
+            <a href="#narratif" class="btn-terminal nav-link" data-page="1" data-fr="&gt; OUVRIR LES ARCHIVES" data-en="&gt; OPEN ARCHIVES">&gt; OUVRIR LES ARCHIVES</a>
+          </div>
+        </div>
+
+        <div class="operator">
+          <div class="operator-frame">
+            <div class="operator-screen brackets">
+              <!-- PLACEHOLDER « pièce jointe perdue » — pour remettre votre photo, supprimez tout
+                   le bloc .lost-file et remettez ces deux lignes :
+                   <img src="Images/PP.png" alt="Charentin Louis">
+                   <span class="operator-screen-label" data-fr="PHOTO — UNITÉ 01" data-en="PHOTO — UNIT 01">PHOTO — UNITÉ 01</span> -->
+              <div class="lost-file lost-file-operator" role="img" aria-label="Pièce jointe perdue">
+                <div class="lost-file-tear" aria-hidden="true"></div>
+                <div class="lost-file-tear lost-file-tear-2" aria-hidden="true"></div>
+                <div class="lost-file-label" aria-hidden="true">
+                  <span class="lost-file-code" data-fr="ERR 0x01 // PHOTO — UNITÉ 01" data-en="ERR 0x01 // PHOTO — UNIT 01">ERR 0x01 // PHOTO — UNITÉ 01</span>
+                  <span class="lost-file-title glitch-text" data-fr="PIÈCE JOINTE PERDUE" data-en="ATTACHMENT LOST">PIÈCE JOINTE PERDUE</span>
+                </div>
+              </div>
+              <div class="operator-screen-scan"></div>
+              <div class="operator-screen-glow"></div>
+            </div>
+            <div class="operator-text">
+              <h2 class="section-title section-title-dark glitch-text"><span class="section-title-label" data-fr="// FICHIER OPÉRATEUR — UNITÉ 512 — Charentin Louis" data-en="// OPERATOR FILE — UNIT 512 — Charentin Louis">// FICHIER OPÉRATEUR — UNITÉ 512 — Charentin Louis</span><span class="section-title-rule" aria-hidden="true"></span></h2>
+              <p class="operator-motto" data-fr="« Le jeu vidéo est un art qui permet de créer des émotions et des ressentis complexes. C’est dans cette idée que je m’oriente au maximum mon travail. »" data-en="&quot;Narrative Design &amp; Game Design — I write worlds that can be played, and systems that tell stories.&quot;">
+                « Le jeu vidéo est un art qui permet de créer des émotions et des ressentis complexes. C’est dans cette idée que je m’oriente au maximum mon travail. »
+              </p>
+              <p>
+                Selon moi, l’impact émotionnel passe avant tout par le vecteur narratif. Je m’en suis donc emparé et l’ai utilisé sous plein de ses formes. Celle que j’ai trouvée la plus puissante était le jeu vidéo. L’interaction du médium permet une implication rarement égalée par d’autres. Aujourd’hui je développe en priorité le Narrative Design, le Game Design, et l'écriture autant dans la prose que le scénario... Je le fais dans l’optique de pouvoir proposer des expériences aux mécaniques profondes qui mettent en avant le vecteur narratif. Je suis curieux et aime aller voir PARTOUT. Je tire mon épingle de chaque chose que j’ai pu expérimenter, de chaque sujet sur lequel j’ai pu me renseigner, de chaque œuvre que j’ai pu consommer et créer…
+              </p>
+              <p>
+                J’ai conscience de l’impact que peut avoir un jeu sur son joueur, chaque décision est prise en connaissance de cause, je ne travaille pas pour choquer, mais pour faire ressentir.
+              </p>
+              <p>
+                Je m’inspire d'œuvres de tout horizon, mais voici quelques-unes ayant le plus marqué mon univers créatif ainsi que ma personne:<br>
+                -Signalis (jeu)<br>
+                -Chainsaw man (manga/anime)<br>
+                -Skarblown (compositeur/animateur)<br>
+                -86 Eighty Six (roman)<br>
+                -Omori (jeu)<br>
+                -Maboroshi (film d’animation)<br>
+                -Until Then (jeu)<br>
+                -Mobil Suit Gundam : The Witch from Mercury (anime)<br>
+              </p
+            </div>
+          </div>
+        </div>
+
+        <div class="transmission">
+
+          <div class="waveform-row">
+            <span class="waveform-label" data-fr="CONTACT" data-en="CONTACT">CONTACT</span>
+            <div class="waveform" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="terminal-box conn-panel">
+            <div class="conn-row conn-head">
+              <span>PORT</span><span data-fr="ÉTAT" data-en="STATUS">ÉTAT</span><span data-fr="LIAISON" data-en="LINK">LIAISON</span><span data-fr="SIGNAL" data-en="SIGNAL">SIGNAL</span>
+            </div>
+            <div class="conn-row conn-dim">
+              <span class="conn-port">01</span>
+              <span class="conn-label" data-fr="RADIO" data-en="RADIO">RADIO</span>
+              <span class="conn-value" data-fr="FRÉQ. 118.4" data-en="FREQ. 118.4">FRÉQ. 118.4</span>
+              <span class="conn-signal" data-fr="FAIBLE" data-en="LOW">FAIBLE</span>
+            </div>
+            <div class="conn-row conn-dim">
+              <span class="conn-port">02</span>
+              <span class="conn-label" data-fr="CANAL 13" data-en="CHANNEL 13">CANAL 13</span>
+              <span class="conn-value" data-fr="OUVERT" data-en="OPEN">OUVERT</span>
+              <span class="conn-signal" data-fr="FAIBLE" data-en="LOW">FAIBLE</span>
+            </div>
+            <!-- MODIFIEZ ICI : vos liens de contact (email, LinkedIn, itch.io) -->
+            <div class="conn-row conn-active">
+              <span class="conn-port">03</span>
+              <span class="conn-label" data-fr="MAIL" data-en="MAIL">MAIL</span>
+              <span class="conn-value"><a href="mailto:votre@gmail.com">louischarentin.pro@gmail.com</a></span>
+              <span class="conn-stable" data-fr="STABLE" data-en="STABLE">STABLE</span>
+            </div>
+            <div class="conn-row conn-active">
+              <span class="conn-port">04</span>
+              <span class="conn-label" data-fr="RÉSEAU" data-en="NETWORK">RÉSEAU</span>
+              <span class="conn-value"><a href="https://www.linkedin.com/in/louis-charentin/" target="_blank" rel="noopener">Linkedin</a></span>
+              <span class="conn-stable" data-fr="STABLE" data-en="STABLE">STABLE</span>
+            </div>
+            <div class="conn-row conn-active">
+              <span class="conn-port">05</span>
+              <span class="conn-label" data-fr="DOSSIER" data-en="FILE">DOSSIER</span>
+              <span class="conn-value"><a href="https://drive.google.com/file/d/1IiJIrIEUy6SDKnkD9zP6oWPg88HP5Zkt/view?usp=sharing" target="_blank" rel="noopener">CV complet</a></span>
+              <span class="conn-stable" data-fr="STABLE" data-en="STABLE">STABLE</span>
+            </div>
+            <div class="conn-loop-line"><span class="prompt">&gt;</span> <span class="typewriter-loop" id="loop"></span><span class="cursor">_</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== PAGE 1 — NARRATIVE DESIGN ===== -->
+    <section class="page" id="narratif" data-index="1">
+      <div class="page-scroll">
+        <h2 class="section-title page-title glitch-text"><span class="section-title-label" data-fr="// SECTION PRINCIPALE" data-en="// NARRATIVE DESIGN">// SECTION PRINCIPALE</span><span class="section-title-rule" aria-hidden="true"></span></h2>
+        <p class="page-intro" data-fr="Dans cette section vous trouverez les travaux qui me reflètent le plus. Le genre d'œuvre que j’ai envie de concevoir, ce que je veux transmettre." data-en="Dialogue writing, worldbuilding, branching narrative structures — projects where story drives design.">
+          Dans cette section vous trouverez les travaux qui me reflètent le plus. Le genre d'œuvre que j’ai envie de concevoir, ce que je veux transmettre.
+        </p>
+
+        <!-- MODIFIEZ ICI : titre, rôle, description, tags, lien -->
+        <article class="case reveal case-brackets">
+          <div class="case-left">
+            <div class="case-index">DOSSIER Nº 01</div>
+            <div class="case-thumb">
+              <img src="images/SM_LOGO.jpg" alt="DOSSIER Nº 01">
+              <div class="case-thumb-glow"></div>
+              <div class="case-thumb-scan"></div>
+              <span class="case-thumb-tag" data-fr="PIÈCE JOINTE" data-en="ATTACHED">PIÈCE JOINTE</span>
+          </div>
+        </div>
+          <div class="case-body">
+            <div class="case-header">
+              <h3>Sweet Memories (jeu)</h3>
+              <span class="stamp" data-fr="EN COURS" data-en="CONFIDENTIAL">EN COURS</span>
+            </div>
+            <p class="case-role" data-fr="RÔLE — Narrative & Game Design / Writing / Programming / Project Manager / Director" data-en="ROLE — Narrative & Game Design / Writing / Programming / Project Manager / Director ">RÔLE — Narrative & Game Design / Writing / Programming / Project Manager / Director </p>
+            <p class="case-desc">
+              Sweet Memories est le premier jeu de mon studio, Empty Twins, disponible sur Steam.
+            </p>
+            <span class="conn-value"><a href="https://store.steampowered.com/app/4908160/Sweet_Memories/" target="_blank" rel="noopener">Page Steam</a></span>
+            </p>
+            <p class="case-date"><b data-fr="Années de création :" data-en="Creation years:">Années de création :</b> 2026 </p>
+            <a href="dossier-narratif-01.html" class="case-link btn-terminal" data-fr="&gt; ACCÉDER AU DOSSIER COMPLET" data-en="&gt; OPEN FULL FILE">&gt; ACCÉDER AU DOSSIER COMPLET</a>
+          </div>
+        </article>
+
+        <!-- MODIFIEZ ICI : titre, rôle, description, tags, lien -->
+        <article class="case reveal case-brackets">
+          <div class="case-left">
+            <div class="case-index">DOSSIER Nº 02</div>
+            <div class="case-thumb">
+              <!-- PLACEHOLDER « pièce jointe perdue » — pour mettre une vraie image plus tard,
+                   supprimez tout le bloc .lost-file et remettez
+                   <img src="Images/nom-du-fichier.jpg" alt="DOSSIER Nº 02"> -->
+              <div class="lost-file" role="img" aria-label="Pièce jointe perdue">
+                <div class="lost-file-tear" aria-hidden="true"></div>
+                <div class="lost-file-tear lost-file-tear-2" aria-hidden="true"></div>
+                <div class="lost-file-label" aria-hidden="true">
+                  <span class="lost-file-code">ERR 0x02 // SIGNAL CORROMPU</span>
+                  <span class="lost-file-title glitch-text" data-fr="PIÈCE JOINTE PERDUE" data-en="ATTACHMENT LOST">PIÈCE JOINTE PERDUE</span>
+                </div>
+              </div>
+              <div class="case-thumb-glow"></div>
+              <div class="case-thumb-scan"></div>
+          </div>
+        </div>
+          <div class="case-body">
+            <div class="case-header">
+              <h3>Blood Gift "temporaire" (Roman)</h3>
+              <span class="stamp" data-fr="ARCHIVÉ" data-en="ARCHIVED">ARCHIVÉ</span>
+            </div>
+            <p class="case-role" data-fr="RÔLE — Writing / Worldbuilding / Character Writing" data-en="ROLE — Writing / Worldbuilding / Character Writing">RÔLE — Writing / Worldbuilding / Character Writing</p>
+            <p class="case-desc">
+              Blood Gift est un roman en cours d’écriture actuellement projeté sur un tome, mais ayant une fin plus que propice à une suite.
+            </p>
+            <p class="case-desc">
+              “Le sang n'était plus un simple messager biologique, il était devenu porteur d’émotions, de ressentis, de forces qui tordaient l'espace même et le temps.”
+            </p>
+            <p class="case-date"><b data-fr="Années de création :" data-en="Creation years:">Années de création :</b> 2026/Indéterminé</p>
+            <a href="dossier-narratif-02.html" class="case-link btn-terminal" data-fr="&gt; ACCÉDER AU DOSSIER COMPLET" data-en="&gt; OPEN FULL FILE">&gt; ACCÉDER AU DOSSIER COMPLET</a>
+          </div>
+        </article>
+
+        <!-- MODIFIEZ ICI : titre, rôle, description, tags, lien -->
+        <article class="case reveal case-brackets">
+          <div class="case-left">
+            <div class="case-index">DOSSIER Nº 03</div>
+            <div class="case-thumb">
+              <img src="Images/TTROYA_vignette.jpg" alt="DOSSIER Nº 03">
+              <div class="case-thumb-glow"></div>
+              <div class="case-thumb-scan"></div>
+              <span class="case-thumb-tag" data-fr="PIÈCE JOINTE" data-en="ATTACHED">PIÈCE JOINTE</span>
+          </div>
+        </div>
+          <div class="case-body">
+            <div class="case-header">
+              <h3>To the rhythm of your anxiety (jeu)</h3>
+              <span class="stamp stamp-active" data-fr="ARCHIVÉ" data-en="ARCHIVED">ARCHIVÉ</span>
+            </div>
+            <p class="case-role" data-fr="RÔLE — Narrative/Game & Level Design / Programming / Project Manager / Director" data-en="RÔLE — Narrative/Game & Level Design / Programming / Project Manager / Director">RÔLE — Narrative/Game & Level Design / Programming / Project Manager / Director</p>
+            <p class="case-desc">
+              To the rhythm of your anxiety a été créé lors d'un projet de première année de Game Design à Isart Digital. La contrainte de ce projet était qu'il soit entièrement jouable avec une seule touche, en plus de le contrainte de temps..
+            </p>
+            <p class="case-desc">
+              C'est un jeu de rythme narratif dans lequel vous vivez la crise d'anxiété d'une lycéenne. Votre but, réussir à la calmer, chaque erreur vous éloignant un peu plus de votre objectif.
+            </p>
+            <p class="case-date"><b data-fr="Années de création :" data-en="Creation years:">Années de création :</b> 2024/2025</p>
+            <a href="dossier-narratif-03.html" class="case-link btn-terminal" data-fr="&gt; ACCÉDER AU DOSSIER COMPLET" data-en="&gt; OPEN FULL FILE">&gt; ACCÉDER AU DOSSIER COMPLET</a>
+          </div>
+        </article>
+
+        <!-- MODIFIEZ ICI : titre, rôle, description, tags, lien -->
+        <article class="case reveal case-brackets">
+          <div class="case-left">
+            <div class="case-index">DOSSIER Nº 04</div>
+            <div class="case-thumb">
+              <img src="Images/LesJumelles_vignette.png" alt="DOSSIER Nº 03">
+              <div class="case-thumb-glow"></div>
+              <div class="case-thumb-scan"></div>
+              <span class="case-thumb-tag" data-fr="PIÈCE JOINTE" data-en="ATTACHED">PIÈCE JOINTE</span>
+          </div>
+        </div>
+          <div class="case-body">
+            <div class="case-header">
+              <h3>Les Jumelles (Roman)</h3>
+              <span class="stamp" data-fr="EN ATTENTE" data-en="STAND BY">EN ATTENTE</span>
+            </div>
+            <p class="case-role" data-fr="RÔLE — Writing / Worldbuilding" data-en="RÔLE — Writing / Worldbuilding">RÔLE — Writing / Worldbuilding</p>
+            <p class="case-desc">
+              Les Jumelles est un projet personnel de roman. Le prologue est écrit et la suite est en attente. Étant mon 1er projet d’écriture aussi ambitieux il est sujet à des réécritures.
+            </p>
+            <p class="case-desc">
+              Ce récit fantastique raconte le voyage de quatre personnes à travers un monde fortement connecté à l’émotionnel et au sensoriel humain, narré par les personnages eux-mêmes.
+            </p>
+            <p class="case-date"><b data-fr="Années de création :" data-en="Creation years:">Années de création :</b> 2024/Indéterminé</p>
+            <a href="dossier-narratif-04.html" class="case-link btn-terminal" data-fr="&gt; ACCÉDER AU DOSSIER COMPLET" data-en="&gt; OPEN FULL FILE">&gt; ACCÉDER AU DOSSIER COMPLET</a>
+          </div>
+        </article>
+
+        <!-- MODIFIEZ ICI : titre, rôle, description, tags, lien -->
+        <article class="case reveal case-brackets">
+          <div class="case-left">
+            <div class="case-index">DOSSIER Nº 05</div>
+            <div class="case-thumb">
+              <img src="Images/Exode_vignette.png" alt="DOSSIER Nº 05">
+              <div class="case-thumb-glow"></div>
+              <div class="case-thumb-scan"></div>
+              <span class="case-thumb-tag" data-fr="PIÈCE JOINTE" data-en="ATTACHED">PIÈCE JOINTE</span>
+          </div>
+        </div>
+          <div class="case-body">
+            <div class="case-header">
+              <h3>Exode (Prototype jeu)</h3>
+              <span class="stamp" data-fr="ARCHIVÉ" data-en="ARCHIVED">ARCHIVÉ</span>
+            </div>
+            <p class="case-role" data-fr="RÔLE — Narrative/Game & Level Design / Writing / Programming" data-en="ROLE — Narrative/Game & Level Design / Writing / Programming">RÔLE — Narrative/Game & Level Design / Writing / Programming</p>
+            <p class="case-desc">
+              Exode est un projet personnel de prototype de jeu d'aventure narratif.
+            </p>
+            <p class="case-desc">
+              Vivez à travers vos yeux, et ceux de Séléné, un récit introspectif où l'attachement de l'humain à sa propre vie est mis en perspective à travers trois sensibilités différentes.
+            </p>
+            <p class="case-date"><b data-fr="Années de création :" data-en="Creation years:">Années de création :</b> 2025</p>
+            <a href="dossier-narratif-05.html" class="case-link btn-terminal" data-fr="&gt; ACCÉDER AU DOSSIER COMPLET" data-en="&gt; OPEN FULL FILE">&gt; ACCÉDER AU DOSSIER COMPLET</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PAGE 2 — GAME DESIGN ===== -->
+    <section class="page" id="gamedesign" data-index="2">
+      <div class="page-scroll">
+        <h2 class="section-title page-title glitch-text"><span class="section-title-label" data-fr="// SECTION SECONDAIRE" data-en="// GAME DESIGN">// SECTION SECONDAIRE</span><span class="section-title-rule" aria-hidden="true"></span></h2>
+        <p class="page-intro page-intro-wide" data-fr="Dans cette section vous trouverez des travaux où j’ai eu moins de liberté, ou l’expérience est à prendre en compte mais où le résultat n’est pas en adéquation avec mes envies créatives." data-en="Mechanics, systems, balancing and prototyping — projects centered on gameplay over narrative.">
+          Dans cette section vous trouverez des travaux où j’ai eu moins de liberté, ou l’expérience est à prendre en compte mais où le résultat n’est pas en adéquation avec mes envies créatives.
+        </p>
+
+        <!-- MODIFIEZ ICI : titre, rôle, description, tags, lien -->
+        <article class="case reveal case-brackets">
+          <div class="case-left">
+            <div class="case-index">DOSSIER Nº 01</div>
+            <div class="case-thumb">
+              <img src="Images/MakeItMelt_vignette.png" alt="DOSSIER Nº 01">
+              <div class="case-thumb-glow"></div>
+              <div class="case-thumb-scan"></div>
+              <span class="case-thumb-tag" data-fr="PIÈCE JOINTE" data-en="ATTACHED">PIÈCE JOINTE</span>
+          </div>
+        </div>
+          <div class="case-body">
+            <div class="case-header">
+              <h3>Make It Melt (Jeu)</h3>
+              <span class="stamp" data-fr="ARCHIVÉ" data-en="ARCHIVED">ARCHIVÉ</span>
+            </div>
+            <p class="case-role" data-fr="RÔLE — Game Designer / Level Designer" data-en="ROLE — Game Designer / Level Designer">RÔLE — Game Designer / Level Designer</p>
+            <p class="case-desc">
+              Make It Melk à été créé lors d’un projet de seconde année de Game Design à Isart Digital. Nous avions comme contrainte de devoir faire un Brawler 3D.
+            </p>
+            <p class="case-desc">
+              Dans ce Brawler vous incarnez Marceline, une forgeronne qui à pour quête de ramener ses matériaux qui ont soudainement pris vie. Trop solides pour être brisés, il faudra les pousser et les faire rebondir dans les forges disposées dans les arènes.
+            </p>
+            <p class="case-date"><b data-fr="Années de création :" data-en="Creation years:">Années de création :</b> 2025/2026</p>
+            <a href="dossier-gamedesign-01.html" class="case-link btn-terminal" data-fr="&gt; ACCÉDER AU DOSSIER COMPLET" data-en="&gt; OPEN FULL FILE">&gt; ACCÉDER AU DOSSIER COMPLET</a>
+          </div>
+        </article>
+
+        <!-- MODIFIEZ ICI : titre, rôle, description, tags, lien -->
+        <article class="case reveal case-brackets">
+          <div class="case-left">
+            <div class="case-index">DOSSIER Nº 02</div>
+            <div class="case-thumb">
+              <img src="Images/Phaos_vignette.png" alt="DOSSIER Nº 02">
+              <div class="case-thumb-glow"></div>
+              <div class="case-thumb-scan"></div>
+              <span class="case-thumb-tag" data-fr="PIÈCE JOINTE" data-en="ATTACHED">PIÈCE JOINTE</span>
+          </div>
+        </div>
+          <div class="case-body">
+            <div class="case-header">
+              <h3>Phaos (Jeu)</h3>
+              <span class="stamp" data-fr="ARCHIVÉ" data-en="ARCHIVED">ARCHIVÉ</span>
+            </div>
+            <p class="case-role" data-fr="RÔLE — Game Design / Level Design / Prototypage" data-en="ROLE — Game Design / Level Design / Prototyping">RÔLE — Game Design / Level Design / Prototypage</p>
+            <p class="case-desc">
+              Phaos a été créé lors d’un projet en première année de Game Design à Isart Digital. Les contraintes de ce projet: Le jeu devait être un 2,5D sur le thème de la lumière.
+            </p>
+            <p class="case-desc">
+              Dans ce puzzle/platformer, les éléments en cristal violet vont apparaître à la lumière de votre lampe torche, tandis que les éléments en cristal vert vont disparaître. Posez et orientez votre lampe au bon endroit pour espérer sortir de cette grotte dans laquelle vous êtes tombés.
+            </p>
+            <p class="case-date"><b data-fr="Années de création :" data-en="Creation years:">Années de création :</b> 2024/2025</p>
+            <a href="dossier-gamedesign-02.html" class="case-link btn-terminal" data-fr="&gt; ACCÉDER AU DOSSIER COMPLET" data-en="&gt; OPEN FULL FILE">&gt; ACCÉDER AU DOSSIER COMPLET</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PAGE 3 — COMPÉTENCE BONUS ===== -->
+    <section class="page" id="bonus" data-index="3">
+      <div class="page-scroll">
+        <h2 class="section-title page-title glitch-text"><span class="section-title-label" data-fr="// ANNEXE" data-en="// BONUS SKILLS">// ANNEXE</span><span class="section-title-rule" aria-hidden="true"></span></h2>
+        <p class="page-intro" data-fr="Dans cette section vous trouverez des travaux en dehors de mes domaines principaux." data-en="Things I can do outside my main field.">
+          Dans cette section vous trouverez des travaux en dehors de mes domaines principaux.
+        </p>
+
+        <!-- MODIFIEZ ICI : titre, rôle, description, tags, lien -->
+        <article class="case reveal case-brackets">
+          <div class="case-left">
+            <div class="case-index">DOSSIER Nº 01</div>
+            <div class="case-thumb case-thumb-center">
+              <img src="Images/Aloneinespace_vignette.png" alt="Alone in space (3D)">
+              <div class="case-thumb-glow"></div>
+              <div class="case-thumb-scan"></div>
+              <span class="case-thumb-tag" data-fr="PIÈCE JOINTE" data-en="ATTACHED">PIÈCE JOINTE</span>
+            </div>
+          </div>
+          <div class="case-body">
+            <div class="case-header">
+              <h3>Alone in space (3D)</h3>
+              <span class="stamp" data-fr="ARCHIVÉ" data-en="ARCHIVED">ARCHIVÉ</span>
+            </div>
+            <p class="case-role" data-fr="RÔLE — Modélisation 3D" data-en="ROLE — Bonus Skill">RÔLE — Modélisation 3D</p>
+            <p class="case-desc">
+              Cette scène 3D a été créée sur blender, à partir d’une illustration 2D trouvée sur internet (auteur anonyme). 
+            </p>
+            <p class="case-desc">
+            </p>
+            <p class="case-date"><b data-fr="Années de création :" data-en="Creation years:">Années de création :</b>2023</p>
+            <a href="dossier-annexe-01.html" class="case-link btn-terminal" data-fr="&gt; ACCÉDER AU DOSSIER COMPLET" data-en="&gt; OPEN FULL FILE">&gt; ACCÉDER AU DOSSIER COMPLET</a>
+          </div>
+        </article>
+
+        <!-- MODIFIEZ ICI : titre, rôle, description, tags, lien -->
+        <article class="case reveal case-brackets">
+          <div class="case-left">
+            <div class="case-index">DOSSIER Nº 02</div>
+            <div class="case-thumb">
+              <img src="Images/Kataivignette.png" alt="DOSSIER Nº 02">
+              <div class="case-thumb-glow"></div>
+              <div class="case-thumb-scan"></div>
+              <span class="case-thumb-tag" data-fr="PIÈCE JOINTE" data-en="ATTACHED">PIÈCE JOINTE</span>
+            </div>
+          </div>
+          <div class="case-body">
+            <div class="case-header">
+              <h3>Niveau StepMania</h3>
+              <span class="stamp" data-fr="ARCHIVÉ" data-en="ARCHIVED">ARCHIVÉ</span>
+            </div>
+            <p class="case-role" data-fr="RÔLE — Level Design jeu de rythme" data-en="ROLE — Bonus Skill">RÔLE — Level Design jeu de rythme</p>
+            <p class="case-desc">
+              Ce level design à été réalisé lors d’un exercice de deuxième année de Game Design à Isart Digital.
+            </p>
+            <p class="case-desc">
+              Nous devions créer un niveau de StepMania (un jeu de rythme) à deux difficultés.
+            </p>
+            <p class="case-date"><b data-fr="Années de création :" data-en="Creation years:">Années de création :</b> 2026 </p>
+            <a href="dossier-annexe-02.html" class="case-link btn-terminal" data-fr="&gt; ACCÉDER AU DOSSIER COMPLET" data-en="&gt; OPEN FULL FILE">&gt; ACCÉDER AU DOSSIER COMPLET</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- ================= BARRE INFÉRIEURE — bobine / navigation ================= -->
+<footer class="reelbar">
+  <button class="reel-arrow" id="prevPage" aria-label="Page précédente">&lt;</button>
+  <div class="reel-dots" id="reelDots"></div>
+  <button class="reel-arrow" id="nextPage" aria-label="Page suivante">&gt;</button>
+  <span class="reel-count"><span id="pageCurrent">01</span>/<span id="pageTotal">05</span></span>
+</footer>
+
+</div><!-- /siteRoot -->
+
+<script src="script.js"></script>
+<script src="lightbox.js"></script>
+</body>
+</html>
