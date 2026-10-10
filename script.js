@@ -36,7 +36,7 @@ const BOOT_FLAG = 'archiveBootDone';
 function revealSite(){
   if(bootDismissed) return;
   bootDismissed = true;
-  try{ localStorage.setItem(BOOT_FLAG, '1'); } catch(e){}
+  try{ sessionStorage.setItem(BOOT_FLAG, '1'); } catch(e){}
   bootScreen.classList.add('is-hidden');
   siteRoot.classList.add('is-visible');
   triggerGlitch();
@@ -46,10 +46,10 @@ function revealSite(){
 }
 
 function runBootSequence(){
-  // si l'écran de connexion a déjà été vu pendant cette visite, on saute
+  // si l'écran de connexion a déjà été vu dans cet onglet (sessionStorage), on saute
   // directement au site — pas besoin de rejouer la séquence à chaque retour
   let alreadyBooted = false;
-  try{ alreadyBooted = localStorage.getItem(BOOT_FLAG) === '1'; } catch(e){}
+  try{ alreadyBooted = sessionStorage.getItem(BOOT_FLAG) === '1'; } catch(e){}
   if(alreadyBooted){
     bootDismissed = true;
     bootScreen.style.display = 'none';
