@@ -1072,3 +1072,103 @@ a:focus-visible, button:focus-visible{ outline:2px solid var(--red-3); outline-o
 @media (max-width:680px){ .operator-card .section-title-label{ white-space:normal; flex-shrink:1; } }
 /* séparation très discrète sous le titre de la page Connexion */
 .terminal-frame .hero-title{ padding-bottom:18px; margin-bottom:20px; border-bottom:1px solid transparent; border-image:linear-gradient(to right, var(--border), rgba(60,38,32,0.35) 70%, transparent) 1; }
+
+/* ============================================================
+   DOSSIER OPÉRATEUR — liste d'inspirations, tirets décalés
+   ============================================================ */
+.operator-text .operator-list-intro{ margin-bottom:10px; }
+.operator-list{
+  list-style:none;
+  margin:0; padding:0 0 0 28px;
+  font-size:16px; color:var(--text);
+}
+.operator-list li{
+  position:relative;
+  padding-left:20px;
+  margin:0 0 4px;
+}
+.operator-list li::before{
+  content:"-";
+  position:absolute; left:0; top:0;
+  color:var(--red-2);
+  font-family:var(--font-mono);
+}
+@media (max-width:680px){ .operator-list{ padding-left:14px; } }
+
+/* ============================================================
+   PAGE CONNEXION — allégée et recentrée
+   ============================================================ */
+/* le terminal est centré verticalement dans la planche */
+.hero-connexion{
+  min-height:calc(100vh - var(--statusbar-h) - var(--reelbar-h) - 60px);
+  padding:28px 24px;
+}
+.connexion-frame{ max-width:780px; padding-bottom:40px; }
+
+.connexion-frame .terminal-topbar{ margin-bottom:30px; }
+.connexion-frame .hero-title{ text-align:center; margin-bottom:22px; }
+
+/* fiche d'identité : libellés gris tout à gauche, valeurs tout à droite */
+.connexion-frame .hero-meta{ margin:0 0 34px; padding:0; font-size:13px; }
+
+.connexion-frame .terminal-step{ margin-bottom:12px; }
+
+/* pied : bouton centré, statut juste au-dessus */
+.connexion-frame .terminal-access{
+  flex-direction:column; justify-content:center; align-items:center;
+  gap:14px; margin-top:32px;
+}
+
+@media (max-width:640px){
+  .hero-connexion{ min-height:0; padding:24px 12px; }
+  .connexion-frame .terminal-access{ flex-direction:column; align-items:center; }
+}
+
+/* resserrage vertical pour que tout le terminal tienne à l'écran */
+.connexion-frame{ padding-bottom:30px; }
+.connexion-frame .terminal-topbar{ margin-bottom:24px; }
+.connexion-frame .hero-title{ font-size:clamp(26px, 3.6vw, 40px); padding-bottom:22px; margin-bottom:34px; }
+.connexion-frame .hero-meta{ margin-bottom:26px; }
+.connexion-frame .conn-row{ padding-top:10px; padding-bottom:10px; }
+.connexion-frame .conn-head{ padding-top:7px; padding-bottom:7px; }
+.connexion-frame .conn-loop-line{ padding-top:10px; padding-bottom:10px; }
+.connexion-frame .terminal-access{ margin-top:24px; gap:12px; }
+.connexion-frame .btn-terminal{ padding:11px 24px; }
+
+/* fiche d'identité unifiée : même taille, même casse, même espacement
+   pour libellés et valeurs — une ligne pointillée relie les deux */
+.connexion-frame .hero-meta{ font-size:12px; }
+.connexion-frame .meta-row{ padding:6px 0; gap:14px; align-items:baseline; }
+.connexion-frame .meta-key,
+.connexion-frame .meta-val{
+  font-size:12px; letter-spacing:0.12em; text-transform:uppercase; font-weight:400;
+}
+.connexion-frame .meta-key{ color:var(--text-dim); }
+.connexion-frame .meta-val{ color:var(--text); order:2; }
+.connexion-frame .meta-val.ok{ color:var(--red-3); }
+.connexion-frame .meta-row::after{
+  content:""; order:1; flex:1; min-width:20px;
+  border-bottom:1px dotted rgba(140,131,120,0.3);
+  transform:translateY(-3px);
+}
+.connexion-frame .meta-editable{ border-bottom:none; }
+
+/* « // VÉRIFICATION DES LIAISONS » + onde : même style que les 3 lignes d'identité */
+.connexion-frame .terminal-step{
+  justify-content:flex-start; align-items:center; gap:14px;
+  padding:6px 0; margin:0 0 14px;
+}
+.connexion-frame .terminal-step-label{
+  font-size:12px; font-weight:400; letter-spacing:0.12em;
+  color:var(--text-dim);
+}
+.connexion-frame .terminal-step::after{
+  content:""; order:1; flex:1; min-width:20px;
+  border-bottom:1px dotted rgba(140,131,120,0.3);
+}
+.connexion-frame .terminal-step .waveform-sm{ order:2; height:12px; gap:3px; }
+.connexion-frame .terminal-step .waveform-sm span,
+.connexion-frame .terminal-step .waveform-sm span:nth-child(odd){ width:2px; background:var(--red-3); }
+.connexion-frame .hero-meta{ margin-bottom:14px; }
+.connexion-frame .hero-meta{ margin-bottom:34px; } /* même écart que sous le titre */
+.connexion-frame .hero-title{ border-bottom:none; border-image:none; } /* plus de ligne sous le titre */
